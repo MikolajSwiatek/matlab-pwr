@@ -1,6 +1,8 @@
-spectrumImage = imread('Spectrum.tif');
+fileName = 'Spectrum.tif';
+spectrumImage = imread(fileName);
 [n, m] = size(spectrumImage);
 
+figure('Name', 'RGB');
 subplot(2,2,1);
 imshow(spectrumImage);
 title('Input image');
