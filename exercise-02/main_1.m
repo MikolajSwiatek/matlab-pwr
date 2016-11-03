@@ -1,7 +1,10 @@
+fileName = 'Cells.tif';
 level = 0.5;
-imageCell = imread('Cells.tif');
+
+imageCell = imread(fileName);
 I = im2double(imageCell);
 
+figure('Name', 'Binary Images');
 subplot(2,2,1); 
 imshow(I);
 
