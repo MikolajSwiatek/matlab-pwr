@@ -25,4 +25,3 @@ imshow(K);
 
 binFileName = 'Cells_bin.tif';
 imwrite(K, binFileName, 'tif')
-info = imfinfo(binFileName);
