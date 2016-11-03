@@ -5,7 +5,7 @@ imageCell = imread(fileName);
 I = im2double(imageCell);
 
 figure('Name', 'Binary Images');
-subplot(2,2,1); 
+subplot(1,2,1); 
 imshow(I);
 
 [n, m] = size(I);
@@ -20,7 +20,7 @@ for i = 1:n
     end
 end
 
-subplot(2,2,2); 
+subplot(1,2,2); 
 imshow(K);
 
 binFileName = 'Cells_bin.tif';
