@@ -40,10 +40,8 @@ result = ycbcr2rgb(result);
 figure
 subplot(1, 2, 1);
 imshow(img);
-axis tight;
 title('Original');
 
 subplot(1, 2, 2)
 imshow(result);
-axis tight;
 title('Result');
