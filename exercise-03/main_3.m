@@ -46,3 +46,17 @@ title('Chroma CB Reconstructed');
 subplot(2, 2, 4);
 imshow(CR);
 title('Chroma CR Reconstructed');
+
+result(:, :, 1) = Y;
+result(:, :, 2) = CB;
+result(:, :, 3) = CR;
+result = ycbcr2rgb(result);
+
+figure
+subplot(1, 2, 1);
+imshow(img);
+title('Original');
+
+subplot(1, 2, 2)
+imshow(result);
+title('Result');
