@@ -8,24 +8,7 @@ Y = YCBCR(:, :, 1);
 CB = YCBCR(:, :, 2);
 CR = YCBCR(:, :, 3);
 
-figure
-subplot(2, 2, 1);
-imshow(img);
-title('Input Image');
-
-subplot(2, 2, 2);
-imshow(Y);
-title('Luminance Y');
-
-subplot(2, 2, 3);
-imshow(CB);
-title('Chroma CB');
-
-subplot(2, 2, 4);
-imshow(CR);
-title('Chroma CR');
-
-howMuch = 2;
+howMuch = 16;
 
 CB = down_sampling2(CB, howMuch);
 CR = down_sampling2(CR, howMuch);
