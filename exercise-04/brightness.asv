@@ -1,0 +1,6 @@
+function [Y] = brightness(img, num)
+    [n , m] = size(X);
+    for i = 1:n
+        for j = 1:m
+            Y(i, j) = img
+    end
