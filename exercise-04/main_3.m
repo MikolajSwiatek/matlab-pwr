@@ -23,7 +23,8 @@ yR = C*x.^gamma_r;
 yG = C*x.^gamma_g;
 yB = C*x.^gamma_b;
 
-subplot(1, 1, 3) 
+figure;
+subplot(1, 1, 1) 
 plot(x, yR, 'LineWidth', 1, 'Color', 'red');  
 hold on;
 plot(x, yG, 'LineWidth', 1, 'Color', 'green');
