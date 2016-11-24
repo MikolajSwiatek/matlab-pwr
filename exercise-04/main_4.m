@@ -20,11 +20,11 @@ subplot(2, 2, 2);
 imshow(Y);
 title('No gamma correction');
 
-subplot(2, 2, 1);
+subplot(2, 2, 3);
 imshow(Z);
 title('Input image');
 
-subplot(2, 2, 2);
+subplot(2, 2, 4);
 imshow(R);
 title('Gamma correction');
 
