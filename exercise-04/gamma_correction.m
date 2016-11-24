@@ -1,6 +1,5 @@
-function[Y] = gamma_correction(X, gamma_r, gamma_g, gamma_b)
+function[Y] = gamma_correction(X, gamma_r, gamma_g, gamma_b, C)
     imgDouble = im2double(X);
-    C = 1;
     
     R = imgDouble(:, :, 1);
     G = imgDouble(:, :, 2);
