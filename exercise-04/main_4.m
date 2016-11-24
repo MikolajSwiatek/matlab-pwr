@@ -7,17 +7,26 @@ gamma_g = 2.0;
 gamma_b = 2.2;
 C = 1;
 
-Y = gammaCorrection(X, gamma_r, gamma_g, gamma_b, C);
-Z = gammaCorrection(X, 1/gamma_r, 1/gamma_g, 1/gamma_b, C);
+Y = gamma_correction(X, gamma_r, gamma_g, gamma_b, C);
+Z = gamma_correction(X, 1/gamma_r, 1/gamma_g, 1/gamma_b, C);
+R = gamma_correction(Z, gamma_r, gamma_g, gamma_b, C);
 
 figure;
-subplot(1, 2, 1);
+subplot(2, 2, 1);
 imshow(img);
 title('Input image');
 
-subplot(1,2,2);
-imshow(result);
-title('Result image');
+subplot(2, 2, 2);
+imshow(Y);
+title('No gamma correction');
+
+subplot(2, 2, 1);
+imshow(Z);
+title('Input image');
+
+subplot(2, 2, 2);
+imshow(R);
+title('Gamma correction');
 
 x = (0: 0.01: 1);
 yR = C*x.^gamma_r;
