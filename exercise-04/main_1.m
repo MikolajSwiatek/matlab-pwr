@@ -4,7 +4,7 @@ img = imread(fileName);
 imgDouble = im2double(img);
 
 valueB = 0.5;
-valueC = 0.1;
+valueC = 1.5;
 
 imgB = brightness(imgDouble, valueB);
 imgC = contrast(imgDouble, valueC);
@@ -34,10 +34,10 @@ figure
 subplot(2, 2, 1);
 plot(x, y1, 'LineWidth',1,'Color','red'); 
 hold on;
-plot(x, x, 'LineWidth',1,'Color','red'); 
+plot(x, x, 'LineWidth',1,'Color','blue'); 
 hold on;
 subplot(2, 2, 3);
 plot(x, x, 'LineWidth',1,'Color','red'); 
 hold on;
-plot(x, y2, 'LineWidth',1,'Color','red'); 
+plot(x, y2, 'LineWidth',1,'Color','blue'); 
 hold on;
