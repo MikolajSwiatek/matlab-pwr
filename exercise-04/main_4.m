@@ -7,8 +7,8 @@ gamma_g = 2.0;
 gamma_b = 2.2;
 C = 1;
 
-Y = gamma_correction(X, gamma_r, gamma_g, gamma_b, C);
-Z = gamma_correction(X, 1/gamma_r, 1/gamma_g, 1/gamma_b, C);
+Y = gamma_correction(img, gamma_r, gamma_g, gamma_b, C);
+Z = gamma_correction(img, 1/gamma_r, 1/gamma_g, 1/gamma_b, C);
 R = gamma_correction(Z, gamma_r, gamma_g, gamma_b, C);
 
 figure;

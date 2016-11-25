@@ -15,5 +15,5 @@ imshow(img);
 title('Input image');
 
 subplot(1, 2, 2);
-imshow(Y);
+imshow(result);
 title('Result image');

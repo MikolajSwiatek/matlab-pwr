@@ -7,7 +7,7 @@ gamma_g = 2.0;
 gamma_b = 2.2;
 C = 1;
 
-result = gamma_correction(gamma_r, gamma_g, gamma_b, C);
+result = gamma_correction(img, gamma_r, gamma_g, gamma_b, C);
 
 figure;
 subplot(1, 2, 1);
