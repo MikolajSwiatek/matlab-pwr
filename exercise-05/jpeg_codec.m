@@ -19,3 +19,7 @@ imshow(img);
 
 subplot(1, 2, 2);
 imshow(final);
+
+errorValue = nnz(D)/(256*256);
+
+errorValue
