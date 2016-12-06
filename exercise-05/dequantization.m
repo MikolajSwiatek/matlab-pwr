@@ -1,5 +1,5 @@
 function[B] = dequantization(A)
-alpha = 1;
+alpha = get_alpha();
 Q  = [
     16 11 10 16 24  40  51  61;
     12 12 14 19 26  58  60  56;

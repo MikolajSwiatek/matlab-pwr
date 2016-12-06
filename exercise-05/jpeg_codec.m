@@ -1,5 +1,6 @@
 fileName = 'Lena_gray_8.tif';
 img = imread(fileName);
+set_alpha(10);
 
 imgDouble = double(img);
 imgDouble = arrayfun(@(x) x - 128, imgDouble);

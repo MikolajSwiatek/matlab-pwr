@@ -1,5 +1,5 @@
 function[B] = quantization(A)
-alpha = 1;
+alpha = get_alpha();
 Q  = [
     16 11 10 16 24  40  51  61;
     12 12 14 19 26  58  60  56;
@@ -15,6 +15,6 @@ B = zeros(8, 8);
 
 for i = 1:8
     for j = 1:8
-        B(i, j) = round((A(i, j)/alpha*Q(i, j)));
+        B(i, j) = round((A(i, j)/(alpha*Q(i, j))));
     end;
 end;
