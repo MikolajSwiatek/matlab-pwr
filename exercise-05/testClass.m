@@ -1,7 +1,7 @@
 function [mse, psnr, errorValue] = testClass(alpha)
 fileName = 'Lena_gray_8.tif';
 img = imread(fileName);
-set_alpha(1);
+set_alpha(alpha);
 
 imgDouble = double(img);
 imgDouble = arrayfun(@(x) x - 128, imgDouble);

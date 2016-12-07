@@ -1,24 +1,26 @@
 numberTest = 10;
-result = zeros(numberTest, 3);
+mses = zeros(1, numberTest, 'double');
+psnrs = zeros(1, numberTest, 'double');
+errorValues = zeros(1, numberTest, 'double');
 
 for i = 1:numberTest
     [mse, psnr, errorValue] = testClass(i);
-    result(i, 1) = mse;
-    result(i, 2) = psnr;
-    result(i, 3) = errorValue;
+    mses(i) = mse;
+    psnrs(i) = psnr;
+    errorValues(i) = errorValue;
 end
 
 x = (1: 1: numberTest);
 
 figure;
 subplot(1, 3, 1);
-plot(x, result(:, 1), 'LineWidth', 1, 'Color', 'red');
+plot(x, mses, 'LineWidth', 1, 'Color', 'red');
 title('MSE');
 
 subplot(1, 3, 2);
-plot(x, result(:, 2), 'LineWidth', 1, 'Color', 'red');
+plot(x, psnrs, 'LineWidth', 1, 'Color', 'red');
 title('PSNR');
 
 subplot(1, 3, 3);
-plot(x, result(:, 3), 'LineWidth', 1, 'Color', 'red');
+plot(x, errorValues, 'LineWidth', 1, 'Color', 'red');
 title('ErrorValue');
